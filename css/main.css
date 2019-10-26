@@ -290,7 +290,7 @@ header nav a:hover {
 
 .select-car .car {
   /*background: radial-gradient(#fff, #C5C7DB);*/
-  background-image: url(https://www.stripeuk.com/wp-content/uploads/2018/11/shutterstock_540175210-BW.jpg);
+  background-image: url(../img/car_park.jpg);
   background-size: cover;
   display: flex;
   justify-content: center;
