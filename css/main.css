@@ -535,6 +535,58 @@ header nav a:hover {
   font-size: 1.5em;
 }
 
+.parts-brands {
+}
+
+.parts-brands .title {
+  padding: 2em 2em 2em 2em;
+  background: #DFDBCE;
+}
+
+.parts-brands h1 {
+  font-weight: 700;
+  margin: 0 0 0.3em 0;
+}
+
+.parts-brands h2 {
+  font-weight: 300;
+  font-size: 1.2em;
+  color: #777;
+  margin: 0 0 0 0;
+}
+
+.parts-brands h1 img {
+  margin-right: 0.3em;
+}
+
+.parts-brands .brands {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: 1fr;
+  grid-gap: 1px;
+  background: #E8E9F2;
+  border-top: 1px solid #E8E9F2;  
+}
+
+.parts-brands .brands a {
+  background: #f5f5f5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2em 0;
+  z-index: 1;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.2s ease;  
+}
+
+.parts-brands .brands a:hover {
+  background: #fff;
+  box-shadow: 0px 0px 10px 3px rgba(31,58,147,0.19);
+  z-index: 2;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;  
+}
+
 /* ==========================================================================
    Helper classes
    ========================================================================== */
