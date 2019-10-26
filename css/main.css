@@ -561,11 +561,15 @@ header nav a:hover {
 
 .parts-brands .brands {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(8, 1fr);
   grid-auto-rows: 1fr;
   grid-gap: 1px;
   background: #E8E9F2;
   border-top: 1px solid #E8E9F2;  
+}
+
+.parts-brands .brands img {
+  width: 50%;
 }
 
 .parts-brands .brands a {
@@ -573,7 +577,7 @@ header nav a:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 2em 0;
+  padding: 1em 0;
   z-index: 1;
   -webkit-transition: all 0.5s ease;
   transition: all 0.2s ease;  
