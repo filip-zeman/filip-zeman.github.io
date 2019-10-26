@@ -245,9 +245,10 @@ header nav a:hover {
 }
 
 .select-car {
-  height: 450px;
-  display: grid;
-  grid-template-columns: auto 450px;
+}
+
+.select-car .title {
+  padding: 2em 2em 0 2em;
 }
 
 .select-car h1, .select-car h2 {
@@ -267,20 +268,21 @@ header nav a:hover {
 }
 
 .select-car .select {
-  padding: 2em 2em;
+  padding: 0 2em 2em 2em;
+  display: flex;
 }
 
-.select-car .select img {
+.select-car .title img {
   margin-right: 0.3em;
 }
 
 .select-car .select select {
-  width: 87%;
   padding: 1em;
-  margin-bottom: 1em;
+  margin: 0 2em 0 0;
+  flex-grow: 1;
 }
 
-.button button {
+.select-car button {
   background: #1F3A93;
   padding: 1em;
   border-radius: 5px;
@@ -589,6 +591,12 @@ header nav a:hover {
   z-index: 2;
   -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;  
+}
+
+footer {
+  height: 500px;
+  background: #555;
+  border-top: 1px solid #999;
 }
 
 /* ==========================================================================
