@@ -472,19 +472,30 @@ header nav a:hover {
   background: #E6EBEE;
   padding: 2em;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   grid-gap: 2em;
-
 }
 
-.promo-parts .parts div {
+.promo-parts .parts .part {
   background: #fff;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
-  padding: 0.5em 1em 3em 1em;
+  padding: 0.5em 1em 0 1em;
+  margin: 0 0 0 0;
+  border: 1px solid transparent;
+  box-shadow: 0px 20px 20px 1px rgba(0,0,0,0);
+  transition: all 0.1s ease;  
+  position: relative;
+  top: 0;
+}
 
+.promo-parts .parts .part:hover {
+  border: 1px solid #9ECBE7;
+  box-shadow: 0px 20px 20px 1px rgba(0,0,0,0.2);
+  transition: all 0.2s ease;  
+  top: -10px;
 }
 
 .promo-parts .parts .product-title {
@@ -494,6 +505,29 @@ header nav a:hover {
 .promo-parts .parts .product-number {
   font-weight: 300;
   font-size: 0.8em;
+}
+
+.promo-parts .parts .price-info {
+  padding: 1em 0 1em 0;
+  margin: 1em 0 0 0;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-top: 1px solid #E8E9F2;
+}
+
+.promo-parts .parts .price-info .discount {
+  background: #2ECC71;
+  color: #fff;
+  padding: 0.5em 1em;
+  border-radius: 20px;
+  font-weight: 700;
+}
+
+.promo-parts .parts .price-info .price {
+  font-weight: 700;
+  font-size: 1.5em;
 }
 
 /* ==========================================================================
