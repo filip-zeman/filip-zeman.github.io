@@ -283,7 +283,7 @@ header nav a:hover {
 }
 
 .select-car button {
-  background: #1F3A93;
+  background: #025253;
   padding: 1em;
   border-radius: 5px;
   border: 0;
@@ -383,7 +383,7 @@ header nav a:hover {
 }
 
 .fav-categories a:hover {
-  background: #AEACFB;
+  background: #a2b5f3;
   border: 1px solid #000;
   -webkit-transition: all 0.1s ease;
   transition: all 0.1s ease;  
@@ -450,7 +450,7 @@ header nav a:hover {
 }
 
 .promo-parts {
-  background: #2ECC71;
+  background: #1f3a93;
 }
 
 .promo-parts .title {
