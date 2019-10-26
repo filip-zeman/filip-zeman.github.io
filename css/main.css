@@ -314,6 +314,7 @@ header nav a:hover {
   grid-auto-rows: 1fr;
   grid-gap: 1px;
   background: #E8E9F2;
+  border-top: 1px solid #E8E9F2;
 }
 
 .car-brands a {
@@ -445,7 +446,7 @@ header nav a:hover {
 }
 
 .promo-parts {
-
+  background: #2ECC71;
 }
 
 .promo-parts .title {
@@ -455,12 +456,13 @@ header nav a:hover {
 .promo-parts h1 {
   font-weight: 700;
   margin: 0 0 0.3em 0;
+  color: #fff;
 }
 
 .promo-parts h2 {
   font-weight: 300;
   font-size: 1.2em;
-  color: #777;
+  color: #fff;
   margin: 0;
 }
 
