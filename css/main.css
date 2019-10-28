@@ -108,20 +108,19 @@ div {
 
 body {
     font-family: 'Roboto', sans-serif;
-    background: #d0d0d0;
+    background: #fefefe;
     color: #333;
   }
 
 .container {
-  max-width: 1280px;
+  max-width: 1366px;
   margin: 0 auto;
   background: #fefefe;
-  margin-bottom: 5em;
 }
 
 header .top {
   border-bottom: 1px solid #dfdfdf;
-  padding: 1em 2em;
+  padding: 1em 0em;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -144,11 +143,15 @@ header .top .right strong {
   font-weight: 700;
 }
 
+header .top .right img {
+  height: 1.5em;
+}
+
 header .middle {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 2em 2em;
+  padding: 2em 0em;
   border-bottom: 1px solid #dfdfdf;
 }
 
@@ -188,7 +191,11 @@ header .search input {
 
 header .search input:focus {
   outline: 0;
-  border: 1px solid #e5e5e5;
+  background: #fff;
+  background-image: url(../img/search_light_2.svg);
+  background-repeat: no-repeat;
+  background-position: 15px 8px;  
+  border: 1px solid #1F3A93;
 }
 
 header .profile {
@@ -212,7 +219,7 @@ header .profile .button span {
 }
 
 header nav {
-  padding: 1em 2em;
+  padding: 1em 0em;
 }
 
 header nav ul {
@@ -237,18 +244,18 @@ header nav a:hover {
 }
 
 .banner {
-  width: 1280px;
-  height: 400px;
-  background-image: url(../img/winter_banner.png);
+  width: 1366px;
+  height: 355px;
+  background-image: url(../img/winter_banner_1366.png);
   background-repeat: no-repeat;
-  box-shadow: inset 0px 10px 10px -5px rgba(0,0,0,0.75);
+  box-shadow: inset 0px 5px 10px -10px rgba(0,0,0,0.75);
 }
 
 .select-car {
 }
 
 .select-car .title {
-  padding: 2em 2em 0 2em;
+  padding: 2em 0em 0 0em;
 }
 
 .select-car h1, .select-car h2 {
@@ -268,7 +275,7 @@ header nav a:hover {
 }
 
 .select-car .select {
-  padding: 0 2em 2em 2em;
+  padding: 0 0em 2em 0em;
   display: flex;
 }
 
@@ -345,7 +352,7 @@ header nav a:hover {
 }
 
 .fav-categories {
-  padding: 2em;
+  padding: 2em 0;
 }
 
 .fav-categories h1 {
@@ -491,7 +498,7 @@ header nav a:hover {
   padding: 0.5em 1em 0 1em;
   margin: 0 0 0 0;
   border: 1px solid transparent;
-  box-shadow: 0px 20px 20px 1px rgba(0,0,0,0);
+  box-shadow: 0px 20px 20px 1px rgba(0,0,0,0.05);
   transition: all 0.1s ease;  
   position: relative;
   top: 0;
@@ -499,7 +506,7 @@ header nav a:hover {
 
 .promo-parts .parts .part:hover {
   border: 1px solid #9ECBE7;
-  box-shadow: 0px 20px 20px 1px rgba(0,0,0,0.2);
+  box-shadow: 0px 20px 20px 1px rgba(0,0,0,0.5);
   transition: all 0.2s ease;  
   top: -10px;
 }
@@ -594,9 +601,57 @@ header nav a:hover {
 }
 
 footer {
-  height: 500px;
-  background: #555;
+  background: linear-gradient(-45deg, #333333, #555);
   border-top: 1px solid #999;
+  padding: 2em;
+}
+
+footer .logo {
+  font-size: 2em;
+  font-weight: 300;
+  display: flex;
+  color: #999;
+}
+
+footer .logo .img {
+  margin: 0 0.3em 0 0;
+  background-image: url(../img/logo_light.svg);
+  fill: #999;
+  height: 48px;
+  width: 48px;
+}
+
+footer .logo h1 {
+  display: inline-block;
+  font-size: inherit;
+  font-weight: 300;
+  position: relative;
+  top: 0.1em;
+  margin: 0;
+}
+
+footer .logo span {
+  font-weight: 700;
+}
+
+footer ul {
+  margin: 0;
+  list-style-type: none;
+  padding: 0 0 0 59px;
+  display: flex;
+}
+
+footer li:not(:last-child) {
+  margin-right: 1em;
+}
+
+footer li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+footer li a:hover {
+  text-decoration: underline;
 }
 
 /* ==========================================================================
