@@ -10,10 +10,10 @@
   <link rel="manifest" href="site.webmanifest">
   <link rel="apple-touch-icon" href="icon.png">
 
-
   <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i&display=swap&subset=cyrillic" rel="stylesheet">
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/flip.min.css">
 
   <meta name="theme-color" content="#fafafa">
 </head>
@@ -32,6 +32,8 @@
                 parts@dn-bg.com
             </span>        
           </div>
+          <div data-flip-counter-js data-fc-size="sm" data-fc-step="11" data-fc-speed="500" data-fc-minDigits="10"
+            data-fc-start="10"></div>
           <div class="right">
               <!--<span class="nm">Всички цени са в <strong>Български левa</strong></span>-->
               <img src="./img/bg.svg"><img src="./img/uk.svg">
@@ -74,7 +76,7 @@
     <div class="select-car">
       <div class="title">
         <h1><img src="./img/search_light_2-1.svg" />Изберете своят автомобил</h1>
-        <h2>За да Ви представим релевантни продукти, моля изберете своят автомобил.</h2>
+        <h2>За да Ви представим подходящи продукти, моля изберете своят автомобил.</h2>
       </div>
       <div class="select">
         <select name="brand" id="brand">
@@ -315,5 +317,8 @@
       </nav>
     </footer>
   </div>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <script src="./js/flip-counter-js.min.js"></script>
 </body>
 </html>

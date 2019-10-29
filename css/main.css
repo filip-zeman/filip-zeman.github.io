@@ -175,7 +175,7 @@ header .middle .logo h1 {
 
 header .middle .logo span {
   font-weight: 700;
-  color: #1F3A93;
+  color: #0c9bd2;
 }
 
 header .search input {
@@ -390,8 +390,8 @@ header nav a:hover {
 }
 
 .fav-categories a:hover {
-  background: #a2b5f3;
-  border: 1px solid #000;
+  background: linear-gradient(145deg, #0c9bd2, #58c7f2);
+  border: 1px solid transparent;
   -webkit-transition: all 0.1s ease;
   transition: all 0.1s ease;  
 }
@@ -405,6 +405,7 @@ header nav a:hover {
   margin: 0;
   display: flex;
   justify-content: center;
+  text-transform: uppercase;
 }
 
 .fav-categories .category-frame:hover {
@@ -457,7 +458,8 @@ header nav a:hover {
 }
 
 .promo-parts {
-  background: #1f3a93;
+  /*background: #1f3a93;*/
+  background: linear-gradient(145deg, #0c9bd2, #58c7f2);
 }
 
 .promo-parts .title {
@@ -482,7 +484,7 @@ header nav a:hover {
 }
 
 .promo-parts .parts {
-  background: #E6EBEE;
+  background: #bfdeea;
   padding: 2em;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -498,7 +500,7 @@ header nav a:hover {
   padding: 0.5em 1em 0 1em;
   margin: 0 0 0 0;
   border: 1px solid transparent;
-  box-shadow: 0px 20px 20px 1px rgba(0,0,0,0.05);
+  box-shadow: 0px 20px 20px 1px rgba(5,30,40,0.05);
   transition: all 0.1s ease;  
   position: relative;
   top: 0;
@@ -506,7 +508,7 @@ header nav a:hover {
 
 .promo-parts .parts .part:hover {
   border: 1px solid #9ECBE7;
-  box-shadow: 0px 20px 20px 1px rgba(0,0,0,0.5);
+  box-shadow: 0px 20px 20px 1px rgba(5,30,40,0.5);
   transition: all 0.2s ease;  
   top: -10px;
 }
