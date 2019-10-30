@@ -184,7 +184,7 @@ header .search input {
   border-radius: 25px;
   width: 30em;
   background: #fafafa;
-  background-image: url(../img/search_light_2.svg);
+  background-image: url(../img/search_light_2-1.svg);
   background-repeat: no-repeat;
   background-position: 15px 8px;
 }
@@ -192,10 +192,10 @@ header .search input {
 header .search input:focus {
   outline: 0;
   background: #fff;
-  background-image: url(../img/search_light_2.svg);
+  background-image: url(../img/search_light_2-1.svg);
   background-repeat: no-repeat;
   background-position: 15px 8px;  
-  border: 1px solid #1F3A93;
+  border: 1px solid #0c9bd2;
 }
 
 header .profile {
@@ -249,13 +249,18 @@ header nav a:hover {
   background-image: url(../img/winter_banner_1366.png);
   background-repeat: no-repeat;
   box-shadow: inset 0px 5px 10px -10px rgba(0,0,0,0.75);
+
 }
 
 .select-car {
+  /*background-image: linear-gradient(180deg, #f9f9f9, #fff);*/
+  background: #ececec;
+  border-top: 2px solid #cacaca;
+  padding: 2em;
 }
 
 .select-car .title {
-  padding: 2em 0em 0 0em;
+  padding: 0em 0em 0 0em;
 }
 
 .select-car h1, .select-car h2 {
@@ -275,7 +280,7 @@ header nav a:hover {
 }
 
 .select-car .select {
-  padding: 0 0em 2em 0em;
+  padding: 0 0em 0em 0em;
   display: flex;
 }
 
@@ -284,39 +289,25 @@ header nav a:hover {
 }
 
 .select-car .select select {
-  padding: 1em;
+  padding: 0.5em;
   margin: 0 2em 0 0;
   flex-grow: 1;
+  background: #f9f9f9;
+  border: 1px solid #c9c9c9;
+  color: #555;
+  font-weight: 700;
+  outline: 0;
+  -webkit-appearance: none;
+  appearance: none;
+  width: 300px;
 }
 
 .select-car button {
-  background: #025253;
+  background: #0d4154;
   padding: 1em;
   border-radius: 5px;
   border: 0;
   color: #fff;
-}
-
-.select-car .car {
-  /*background: radial-gradient(#fff, #C5C7DB);*/
-  background-image: url(../img/car_park.jpg);
-  background-size: cover;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.select-car .car img {
-  mix-blend-mode: multiply;
-}
-
-.select-car .car p {
-  margin: 0;
-  padding: 1em;
-  text-align: center;
-  font-weight: 700;
-  font-size: 1.2em;
-  color: #1F3A93;
 }
 
 .car-brands {
@@ -386,14 +377,12 @@ header nav a:hover {
   background: #f1f1f1;
   border: 1px solid transparent;
   -webkit-transition: all 0.1s ease;
-  transition: all 0.1s ease;  
 }
 
 .fav-categories a:hover {
   background: linear-gradient(145deg, #0c9bd2, #58c7f2);
   border: 1px solid transparent;
   -webkit-transition: all 0.1s ease;
-  transition: all 0.1s ease;  
 }
 
 .fav-categories .categories a img {
@@ -484,7 +473,7 @@ header nav a:hover {
 }
 
 .promo-parts .parts {
-  background: #bfdeea;
+  background: #cee6ef;
   padding: 2em;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -504,11 +493,12 @@ header nav a:hover {
   transition: all 0.1s ease;  
   position: relative;
   top: 0;
+  border-radius: 0.5em;
 }
 
 .promo-parts .parts .part:hover {
   border: 1px solid #9ECBE7;
-  box-shadow: 0px 20px 20px 1px rgba(5,30,40,0.5);
+  box-shadow: 0px 20px 40px 1px rgba(5,30,40,0.3);
   transition: all 0.2s ease;  
   top: -10px;
 }
