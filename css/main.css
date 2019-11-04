@@ -124,6 +124,7 @@ header .top {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  font-size: 0.8em;
 }
 
 header .top img {
@@ -202,15 +203,22 @@ header .profile {
   display: flex;
 }
 
-header .profile div {
+header .profile a {
   display: flex;
   flex-direction: column;
+  align-items: center;
   font-size: 0.8em;
   font-weight: 700;
   text-transform: uppercase;
+  color: #000;
+  text-decoration: none;
 }
 
-header .profile div:not(:last-child){
+header .profile a:hover {
+  color: #0c9bd2;;
+}
+
+header .profile a:not(:last-child){
   margin-right: 1em;
 }
 
@@ -244,18 +252,20 @@ header nav a:hover {
 }
 
 .banner {
-  width: 1366px;
-  height: 355px;
-  background-image: url(../img/winter_banner_1366.png);
-  background-repeat: no-repeat;
-  box-shadow: inset 0px 5px 10px -10px rgba(0,0,0,0.75);
+  display: grid;
+  grid-template-columns: 30% auto;
+  height: 300px;
+  grid-gap: 1em;
+  margin: 0 0 1em 0;
+}
 
+.banner .ad {
+  background: #787878;
 }
 
 .select-car {
-  /*background-image: linear-gradient(180deg, #f9f9f9, #fff);*/
-  background: #ececec;
-  border-top: 2px solid #cacaca;
+  background-image: linear-gradient(45deg, #ddd, #c2c2c2);
+  /*background: #ececec;*/
   padding: 2em;
 }
 
@@ -303,11 +313,13 @@ header nav a:hover {
 }
 
 .select-car button {
+  flex-grow: 100;
   background: #0d4154;
   padding: 1em;
   border-radius: 5px;
   border: 0;
   color: #fff;
+  flex-grow: 0;
 }
 
 .car-brands {
@@ -392,6 +404,8 @@ header nav a:hover {
 .fav-categories .category-frame p {
   padding: 0.5em;
   margin: 0;
+  font-size: 1em;
+  text-align: center;
   display: flex;
   justify-content: center;
   text-transform: uppercase;
@@ -426,7 +440,6 @@ header nav a:hover {
 }
 
 .contact-info .info div {
-  height: 30px;
   display: flex;
   align-items: center;
   font-weight: 300;
@@ -447,6 +460,7 @@ header nav a:hover {
 }
 
 .promo-parts {
+  margin-top: 1em;
   /*background: #1f3a93;*/
   background: linear-gradient(145deg, #0c9bd2, #58c7f2);
 }
@@ -470,6 +484,8 @@ header nav a:hover {
 
 .promo-parts h1 img {
   margin-right: 0.3em;
+  position: relative;
+  top: -5px;
 }
 
 .promo-parts .parts {
@@ -520,6 +536,7 @@ header nav a:hover {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
   border-top: 1px solid #E8E9F2;
 }
 
@@ -533,7 +550,7 @@ header nav a:hover {
 
 .promo-parts .parts .price-info .price {
   font-weight: 700;
-  font-size: 1.5em;
+  font-size: 1em;
 }
 
 .parts-brands {
@@ -605,31 +622,10 @@ footer .logo {
   color: #999;
 }
 
-footer .logo .img {
-  margin: 0 0.3em 0 0;
-  background-image: url(../img/logo_light.svg);
-  fill: #999;
-  height: 48px;
-  width: 48px;
-}
-
-footer .logo h1 {
-  display: inline-block;
-  font-size: inherit;
-  font-weight: 300;
-  position: relative;
-  top: 0.1em;
-  margin: 0;
-}
-
-footer .logo span {
-  font-weight: 700;
-}
-
 footer ul {
-  margin: 0;
+  margin: 1em 0 0 0;
+  padding: 0;
   list-style-type: none;
-  padding: 0 0 0 59px;
   display: flex;
 }
 
@@ -638,7 +634,7 @@ footer li:not(:last-child) {
 }
 
 footer li a {
-  color: #fff;
+  color: #cacaca;
   text-decoration: none;
 }
 
@@ -735,8 +731,269 @@ footer li a:hover {
    Modify as content requires.
    ========================================================================== */
 
-@media only screen and (min-width: 35em) {
-  /* Style adjustments for viewports that meet the condition */
+@media only screen and (max-width: 1024px) {
+  .container {
+    width: 100%;
+  }
+
+  header .top {
+    padding: 1em 2em;
+  }
+
+  header .middle {
+    padding: 2em 2em;
+  }
+
+  header .search input {
+    width: 25em;
+  }
+
+  header nav {
+    padding: 1em 2em;
+  }
+
+  .select-car .select select {
+    width: 200px;
+    margin-right: 1em;
+  }
+
+  .promo-parts .parts {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .fav-categories {
+    padding: 2em 2em;
+  }
+
+  .fav-categories .categories {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  header .middle .logo img {
+    width: 100%;
+    margin: 0 1em 0 0;
+  }  
+ 
+  header .top {
+    padding: 1em 2em;
+  }
+
+  header .middle {
+    padding: 2em 2em;
+  }
+
+  header nav {
+    padding: 1em;
+  }
+
+  header .search {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  header .search input {
+  padding: 1em 1em 1em 3.8em;
+  border-radius: 25px;
+  font-size: 0.8em;
+  background: #fafafa;
+  background-image: url(../img/search_light_2-1.svg);
+  background-repeat: no-repeat;
+  background-position: 15px 8px;
+  background-size: 2em;
+  }
+
+  header .search input:focus {
+    background-size: 2em;
+  }
+
+  .profile img {
+    width: 2em;
+  }
+
+  .profile a span {
+    font-size: 0.8em;
+  }
+
+  header nav {
+    display: flex;
+    justify-content: center;
+  }
+
+  header nav a {
+    font-size: 1em;
+  }
+
+  header nav li:not(:last-child) {
+    margin-right: 1em;
+  }
+
+  .select-car .select {
+    flex-wrap: wrap;
+  }
+
+  .select-car .select button {
+    margin: 1em 0 0 0;
+  }
+
+  .promo-parts h2 {
+    font-size: 1em;
+  }
+  
+  .promo-parts .parts {
+    background: #cee6ef;
+    padding: 2em;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 2em;
+  }
+
+  .contact-info .info {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 2em;
+  }
+
+  .contact-info .info div:not(:last-child) {
+    padding-right: 1em;
+    border-right: 1px solid transparent;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  header .top {
+    padding: 1em;
+  }
+  
+  header .middle {
+    padding: 1em;
+  }
+
+  header .top img {
+    width: 1.5em;
+  }
+
+  header .top span {
+    font-size: 0.8em;
+  }
+
+  header .middle {
+    flex-direction: column;
+  }
+
+  header .middle .logo {
+    order: 2;
+  }
+
+  header .middle .logo img {
+    width: 230px;
+    margin: 0 0 0.5em 0;
+  }
+
+  header .search {
+    margin: 0 0 0 0;
+    order: 3;
+  }
+
+  header .profile {
+    order: 1;
+    margin: 0 0 1em 0;
+  }
+
+  header .middle .search input {
+    width: 100%;
+  }
+
+  header nav ul {
+    flex-direction: column;
+  }
+
+  header nav li {
+    text-align: center;
+    font-size: 1.2em;
+  }
+
+  header nav li:not(:last-child){
+    margin: 0 0 0.4em 0;
+  }
+
+  .banner {
+    display: grid;
+    grid-template-columns: 100%;
+    height: 300px;
+    grid-gap: 1em;
+    margin: 0 0 1em 0;  
+  }
+
+  .select-car {
+    padding: 1em;
+  }  
+  .select-car h1 {
+    font-weight: 700;
+    margin-bottom: 0.3em;
+    font-size: 1.2em;
+  }
+
+  .select-car h2 {
+    font-weight: 300;
+    font-size: 1em;
+    color: #777;
+    margin-bottom: 1.3em;
+  }  
+
+  .select-car .title img {
+    width: 1.5em;
+  }
+
+  .select-car .select select {
+    flex-grow: 0;
+    width: 100%;
+    margin: 0 0 0.4em 0;
+  }
+
+  .promo-parts .title {
+    padding: 1em;
+  }
+
+  .promo-parts h1 {
+    font-size: 1.2em;
+  }
+
+  .promo-parts h1 img {
+    width: 1.5em;
+    top: -1px;
+  }
+
+  .promo-parts h2 {
+    font-size: 1em;    
+  }
+
+  .promo-parts .parts {
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 1em;
+  }  
+  
+  .fav-categories {
+    padding: 1em;
+  }
+
+  .fav-categories .categories {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .fav-categories h1 {
+    font-size: 1.2em;
+  }
+
+  .fav-categories h1 img {
+    width: 1.5em;
+  }
+
+  .fav-categories h2 {
+    font-size: 1em;
+  }
 }
 
 @media print,
