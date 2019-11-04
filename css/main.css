@@ -973,8 +973,9 @@ footer li a:hover {
   .promo-parts .parts {
     grid-template-columns: repeat(1, 1fr);
     grid-gap: 1em;
+    padding: 1em;
   }  
-  
+
   .fav-categories {
     padding: 1em;
   }
@@ -993,6 +994,22 @@ footer li a:hover {
 
   .fav-categories h2 {
     font-size: 1em;
+  }
+
+  .contact-info {
+    padding: 2em;
+  }
+
+  .contact-info h1 {
+    font-size: 1.4em;
+  }
+
+  .contact-info h2 {
+    font-size: 1em;
+  }
+
+  .contact-info .info {
+    grid-template-columns: repeat(1, 1fr);
   }
 }
 
