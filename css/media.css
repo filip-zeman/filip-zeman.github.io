@@ -1,0 +1,21 @@
+@media (max-width: 1366px) {
+  header .top {
+    padding: 1em 2em;
+  }
+
+  header .middle {
+    padding: 2em 2em;
+  }
+
+  header nav {
+    padding: 1em 2em;
+  }
+
+  footer .logo {
+    padding: 0 0 0 2em !important;
+  }
+
+  .copyright {
+    padding: 0 0 0 2em !important;
+  }
+}

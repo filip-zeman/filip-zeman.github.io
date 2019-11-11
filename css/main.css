@@ -153,7 +153,7 @@ header .middle {
   justify-content: space-between;
   align-items: center;
   padding: 2em 0em;
-  border-bottom: 1px solid #dfdfdf;
+  border-bottom: 1px solid #0c9bd2;
 }
 
 header .middle .logo {
@@ -236,7 +236,9 @@ header .profile .button span {
 }
 
 header nav {
-  padding: 1em 0em;
+  padding: 1em 2em;
+  margin: 0 0 1em 0;
+  background-image: linear-gradient(180deg, #f6f8f9, #fff);
 }
 
 header nav ul {
@@ -262,7 +264,7 @@ header nav a:hover {
 
 .banner {
   display: grid;
-  grid-template-columns: 30% auto;
+  grid-template-columns: 30% minmax(0, auto); 
   height: 300px;
   grid-gap: 1em;
   margin: 0 0 1em 0;
@@ -377,19 +379,19 @@ header nav a:hover {
 }
 
 .fav-categories {
-  padding: 2em 0;
+  padding: 2em 0 1em 0;
 }
 
 .fav-categories h1 {
   font-weight: 700;
-  margin: 0 0 0.3em 0;
+  margin: 0 0 0.3em 1em;
 }
 
 .fav-categories h2 {
   font-weight: 300;
   font-size: 1.2em;
   color: #777;
-  margin: 0 0 1.3em 0;
+  margin: 0 0 1.3em 2em;
 }
 
 .fav-categories h1 img {
@@ -398,8 +400,7 @@ header nav a:hover {
 
 .fav-categories .categories {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  grid-auto-rows: 1fr;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
   grid-gap: 1em;
 }
 
@@ -427,6 +428,7 @@ header nav a:hover {
 
 .fav-categories .categories a img {
   width: 40%;
+  height: 40%;
 }
 
 .fav-categories .category-frame a p {
@@ -574,9 +576,15 @@ header nav a:hover {
 
 .promo-parts .parts .part .part-info .part-title {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   text-align: center;
   font-weight: 700;
+}
+
+.promo-parts .parts .part .part-info .part-title .part-catalog {
+  font-size: 0.7em;
+  font-weight: 400;
 }
 
 .promo-parts .parts .part .buy {
@@ -587,8 +595,16 @@ header nav a:hover {
   padding: 0 1em;
 }
 
+.promo-parts .parts .part .old-price {
+  font-size: 0.8em;
+  text-decoration: line-through;
+  color: #999;
+}
+
 .promo-parts .parts .part .part-price {
   display: flex;
+  flex-direction: column;
+  text-align: center;
   font-weight: 700;
   font-size: 1em;
   color: #0c9bd2;
@@ -670,40 +686,125 @@ header nav a:hover {
   transition: all 0.2s ease;  
 }
 
+.part-single {
+  margin: 0 0 1em 0;
+}
+
 footer {
-  background: #111;
-  padding: 2em;
+  background: #333;
+  color: #999;
+  display: flex;
+  justify-content: center;
+}
+
+footer .inner {
+  width: 1366px;
+  padding: 3em 0;
+  display: grid;
+  grid-gap: 1em;
+  grid-template-columns: repeat(4, minmax(0, 1fr)); 
 }
 
 footer .logo {
-  font-size: 2em;
-  font-weight: 300;
   display: flex;
-  color: #999;
+  flex-direction: column;
+  background-image: url(https://dummeraugust.com/main/content/blog/posts/demos/waterfalls_bulgaria/bulgaria_contour_map.png);
+  background-repeat: no-repeat;
+  background-size: 80%;
+}
+
+footer .store-info {
+  font-size: 1.1em;
+  color: #fff;
+  font-weight: 400;
+  margin: 1em 0 0 0;
+}
+
+footer .button {
+  padding: 1em 2em;
+  border-radius: 0.5em;
+  background: #fff;
+  color: #000;
+  margin: 2em 0 0 0;
+  width: 8em;
+  font-size: 0.9em;
+  text-decoration: none;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+footer .button:hover {
+  background: #0c9bd2;
+  color: #000;
 }
 
 footer .logo img {
-  width: 3em;
+  width: 150px;
+}
+
+footer .menu {
+  padding: 0 0 0 4em;
+  display: flex;
+  flex-direction: column;
+}
+
+footer .menu h1 {
+  font-size: 1.1em;
+  color: #fff;
+  margin: 0;
+}
+
+footer .menu .title-divider {
+  height: 1px;
+  background: #444;
+  margin: 0.5em 0 1em 0;
+}
+
+footer .menu .title-divider div {
+  background: #0c9bd2;
+  height: 1px;
+  width: 30%; 
+}
+
+footer .m3 img {
+  width: 1.5em;
+  margin-right: 0.5em;
+}
+
+footer .m3 li:not(:last-child) {
+  margin-bottom: 1em !important;
 }
 
 footer ul {
-  margin: 1em 0 0 0;
+  margin: 0;
   padding: 0;
   list-style-type: none;
   display: flex;
+  flex-direction: column;
+}
+
+footer li {
+  display: flex;
+  align-items: center;
 }
 
 footer li:not(:last-child) {
-  margin-right: 1em;
+  margin-bottom: 0.3em;
 }
 
 footer li a {
   color: #cacaca;
   text-decoration: none;
+  font-size: 1.2em;
 }
 
 footer li a:hover {
   text-decoration: underline;
+}
+
+.copyright {
+  grid-column: 1 / -1;
+  margin: 2em 0 0 0;
 }
 
 /* ==========================================================================
@@ -794,9 +895,6 @@ footer li a:hover {
    These examples override the primary ('mobile first') styles.
    Modify as content requires.
    ========================================================================== */
-
-@media only screen and (max-width: 768px) {
-}
 
 @media print,
   (-webkit-min-device-pixel-ratio: 1.25),
