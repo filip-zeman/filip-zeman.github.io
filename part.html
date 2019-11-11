@@ -10,9 +10,10 @@
   <link rel="manifest" href="site.webmanifest">
   <link rel="apple-touch-icon" href="icon.png">
 
-  <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i&display=swap&subset=cyrillic" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i&display=swap&subset=cyrillic"
+    rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  
+
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/media.css">
@@ -23,53 +24,53 @@
 <body>
   <div class="container">
     <header>
-        <div class="top">
-          <div class="left">
-            <img src="./img/call.svg">
-            <span>
-              +359 887 430 340
-            </span>
-            <img src="./img/email.svg">
-            <span>
-                parts@dn-bg.com
-            </span>        
-          </div>
-          <div class="right">
-              <!--<span class="nm">Всички цени са в <strong>Български левa</strong></span>-->
-              <img src="./img/bg.svg"><img src="./img/uk.svg">
-          </div>
+      <div class="top">
+        <div class="left">
+          <img src="./img/call.svg">
+          <span>
+            +359 887 430 340
+          </span>
+          <img src="./img/email.svg">
+          <span>
+            parts@dn-bg.com
+          </span>
         </div>
-        <div class="middle">
-          <div class="logo"><img src="./img/logo.jpg"></div>
-          <div class="search">
-            <input type="search" placeholder="Търсете по номер на част или VIN" />
-          </div>
-          <div class="profile">
-            <a href="#" class="button">
-              <img src="./img/cart_light.svg">
-              <span>Количка</span>
-            </a>
-            <a href="#" class="button">
-              <img src="./img/profile_light_2.svg">
-              <span>Профил</span>
-            </a>
-            <a href="#" class="button">
-              <img src="./img/garage_light_2.svg">
-              <span>Гараж</span>
-            </a>
-          </div>
+        <div class="right">
+          <!--<span class="nm">Всички цени са в <strong>Български левa</strong></span>-->
+          <img src="./img/bg.svg"><img src="./img/uk.svg">
         </div>
-        <nav>
-          <ul>
-            <li><a href="#">Авточасти</a></li>
-            <li><a href="#">Камиони</a></li>
-            <li><a href="#">Акумулатори</a></li>
-            <li><a href="#">Масла</a></li>
-            <li><a href="#">Крушки</a></li>
-            <li><a href="#">Аксесоари</a></li>
-            <li><a href="#">Гуми</a></li>
-          </ul>
-        </nav>
+      </div>
+      <div class="middle">
+        <div class="logo"><img src="./img/logo.jpg"></div>
+        <div class="search">
+          <input type="search" placeholder="Търсете по номер на част или VIN" />
+        </div>
+        <div class="profile">
+          <a href="#" class="button">
+            <img src="./img/cart_light.svg">
+            <span>Количка</span>
+          </a>
+          <a href="#" class="button">
+            <img src="./img/profile_light_2.svg">
+            <span>Профил</span>
+          </a>
+          <a href="#" class="button">
+            <img src="./img/garage_light_2.svg">
+            <span>Гараж</span>
+          </a>
+        </div>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#">Авточасти</a></li>
+          <li><a href="#">Камиони</a></li>
+          <li><a href="#">Акумулатори</a></li>
+          <li><a href="#">Масла</a></li>
+          <li><a href="#">Крушки</a></li>
+          <li><a href="#">Аксесоари</a></li>
+          <li><a href="#">Гуми</a></li>
+        </ul>
+      </nav>
     </header>
     <div class="breadcrumb">
       <nav>
@@ -78,14 +79,86 @@
             <a href="#">Начало</a>
           </li>
           <li>
-            <a href="#">Начало</a>
+            <a href="#">Audi A3 (8P1) 2.0 TDI 16V quattro</a>
+          </li>
+          <li>
+            <a href="#">LuK Комплект съединител</a>
           </li>
         </ul>
       </nav>
     </div>
     <div class="part-single">
-      asd
-    </div> 
+      <div class="photo">
+        <img src="./img/product_5.png">
+      </div>
+      <div class="main-info">
+        <h1>LuK Комплект съединител</h1>
+        <h2>Каталожен номер: 624 3180 09</h2>
+        <span class="price">
+          <span class="old_price">
+            399.37 лв.
+          </span>
+          319.50 лв.
+        </span>
+        <span class="manufacturer">
+          Производител: <img src="./img/luk.jpg">
+        </span>
+        <div class="purchase">
+          <span class="description">Количество:</span>
+          <div class="quantity">
+            <a onclick="minusClick(); return false" href="#" class="minus">-</a>
+            <input id="quantity" type="text" value="1">
+            <a onclick="plusClick(); return false" href="#">+</a>
+          </div>
+          <a href="#" class="add_to_cart"><img src="./img/add-to-cart_3.svg">Добави в количката</a>
+        </div>
+        <div class="details">
+          <div class="menu">
+            <a href="#">Описание</a> 
+            <a href="#">ОЕМ</a>
+            <a href="#">Алтернативи</a>
+            <a href="#">Превозни средства</a>
+          </div>
+          <div class="info description">
+            <table>
+              <tr>
+                <th>Серия</th>
+                <th>LuK SAC</th>
+              </tr>
+              <tr>
+                <td>Парт номер:</td>
+                <td>624 3180 09</td>
+              </tr>
+              <tr>
+                <td>Производител:</td>
+                <td>LuK</td>
+              </tr>
+              <tr>
+                <td>Диаметър [mm]:</td>
+                <td>240 мм</td>
+              </tr>
+              <tr>
+                <td>Допълнителен артикул / Допълнителна информация 2:</td>
+                <td>С диск за съединителя</td>
+              </tr>
+              <tr>
+                <td>Допълващ артикул / Допълваща информация:</td>
+                <td>С притискателен диск</td>
+              </tr>
+              <tr>
+                <td>Настройка:</td>
+                <td>С автоматична донастройка</td>
+              </tr>
+              <tr>
+                <td>Версия на двигателя:</td>
+                <td>За двигатели с двумасов маховик</td>
+              </tr>
+            </table>
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
     <div class="parts-brands">
       <!--<div class="title">
         <h1><img src="./img/brands_light_2.svg">Ние работим с лидери на пазара</h1>
@@ -101,7 +174,7 @@
         <a href="#"><img src="./img/ate.png"></a>
         <a href="#"><img src="./img/behr.png"></a>
       </div>
-    </div>       
+    </div>
     <div class="contact-info">
       <h1>Не сте сигурни в избора си?</h1>
       <h2>Колебаете се или имате въпроси? Ние сме тук, ето как да се свържете с нас:</h2>
@@ -109,18 +182,18 @@
         <div>
           <img src="./img/call_2.svg">
           <span><span>+359 887 430 340</span><br>
-          Бързи запитвания в работно време. Ще ви върнем обаждане, ако не отговорим веднага.</span>
+            Бързи запитвания в работно време. Ще ви върнем обаждане, ако не отговорим веднага.</span>
         </div>
         <div>
           <img src="./img/email_2.svg">
           <span><span>parts@dn-bg.com</span><br>
-          По-обстойни запитвания. Ще Ви отговорим до един-два работни дни.</span>          
+            По-обстойни запитвания. Ще Ви отговорим до един-два работни дни.</span>
         </div>
         <div>
           <img src="./img/messenger_light.svg">
           <span><span>facebook.com/dnmotors</span><br>
-          Бързи запитвания по Messenger в работно време.</span>        
-        </div>      
+            Бързи запитвания по Messenger в работно време.</span>
+        </div>
       </div>
     </div>
   </div>
@@ -128,12 +201,15 @@
     <div class="inner">
       <div class="logo">
         <img src="./img/logo.png">
-        <span class="store-info">D&N е онлайн магазин за авточасти на достъпни цени. Също така, предлагаме и сервизно обслужване.</span>
+        <span class="store-info">D&N е онлайн магазин за авточасти на достъпни цени. Също така, предлагаме и сервизно
+          обслужване.</span>
         <a href="#" class="button">Намери обект</a>
       </div>
       <div class="menu">
         <h1>Меню</h1>
-        <div class="title-divider"><div></div></div>
+        <div class="title-divider">
+          <div></div>
+        </div>
         <nav>
           <ul>
             <li>
@@ -201,9 +277,24 @@
           </ul>
         </nav>
       </div>
+      <div class="copyright">DN-BG.com ©2000 - 2019 | ДН-МОТОРС ЕООД Всички права запазени.</div>
     </div>
   </footer>
+  <script>
+    function minusClick() {
+      var i = document.getElementById("quantity").value;
+      if (i==="1") {
+        return false;
+      }
+      document.getElementById("quantity").value = --i;
+    }
+    function plusClick() {
+      var i = document.getElementById("quantity").value;
+      document.getElementById("quantity").value = ++i;
+    }    
+  </script>
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"
     integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 </body>
+
 </html>
