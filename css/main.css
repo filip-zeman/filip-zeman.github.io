@@ -827,6 +827,17 @@ header nav a:hover {
   display: none;
 }
 
+.part-single .main-info .details .vehicles div {
+  overflow-y: scroll;
+  height: 400px !important;
+  display: block;
+  font-size: 0.8em;
+}
+
+.part-single .main-info .details .vehicles table {
+
+}
+
 .part-single .main-info .details .alternatives {
   padding: 1em;
   display: none;
@@ -900,6 +911,7 @@ header nav a:hover {
 
 .part-single .main-info .details .oem a:last-child {
   border-bottom: 0;
+  padding-bottom: 0;
 }
 
 .part-single .main-info .details .oem a:first-child {
@@ -946,6 +958,149 @@ tr:nth-child(even) {
   margin-right: 1px;
 }
 
+.catalog {
+  padding: 1em 0 2em 0;
+}
+
+.catalog .title h1 {
+  font-weight: 700;
+  margin: 0 0 0.3em 0em;
+}
+
+.catalog .title h2 {
+  font-weight: 300;
+  font-size: 1.2em;
+  color: #777;
+  margin: 0 0 2em 0;
+}
+
+.catalog .title h1 img {
+  margin-right: 0.3em;
+  width: 1em;
+}
+
+.catalog .catalog-grid {
+  display: grid;
+  grid-gap: 2em;
+  grid-template-columns: repeat(5, minmax(0, 1fr)); 
+}
+
+.catalog .catalog-grid div {
+  background: #fff;
+  box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 0px 0px 5px 5px;
+  padding: 0 0 1.5em 0;
+}
+
+.catalog .catalog-grid div h1 {
+  font-size: 1.1em;
+  text-align: center;
+  margin: 1.5em 0.3em;
+  padding: 0;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #000;
+}
+
+.catalog .catalog-grid div nav {
+  margin: 12em 0 0 0;
+}
+
+.catalog .catalog-grid div ul {
+  margin: 0;
+  padding: 0 1em;
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+}
+
+.catalog .catalog-grid div li {
+  display: flex;
+  align-items: center;
+}
+
+.catalog .catalog-grid div li:not(:last-child) {
+  margin-bottom: 0.3em;
+}
+
+.catalog .catalog-grid div li .view-all {
+  color: #0c9bd2 !important;
+  text-decoration: none;
+  font-size: 1em;
+  font-weight: 700;
+  margin: 0.5em 0 0 0;
+}
+
+.catalog .catalog-grid div li a {
+  color: #333;
+  text-decoration: none;
+  font-size: 0.9em;
+}
+
+.catalog .catalog-grid div li a:hover {
+  text-decoration: underline;
+}
+
+.catalog .catalog-grid .breaks {
+  background-image: url(../img/breaks.png);
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+}
+
+.catalog .catalog-grid .breaks-2 {
+  background-image: url(../img/breaks_2.png);
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+}
+
+.catalog .catalog-grid .suspension {
+  background-image: url(../img/suspension.png);
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+}
+
+.catalog .catalog-grid .clutch {
+  background-image: url(../img/clutch.png);
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+}
+
+.catalog .catalog-grid .engine {
+  background-image: url(../img/engine.png);
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+}
+
+.catalog .catalog-grid .lights {
+  background-image: url(../img/lights.png);
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+}
+
+.catalog .catalog-grid .radiator {
+  background-image: url(../img/radiator.png);
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+}
+
+.catalog .catalog-grid .wipers {
+  background-image: url(../img/wipers.png);
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+}
+
+.catalog .catalog-grid .body {
+  background-image: url(../img/body.png);
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+}
+
+.catalog .catalog-grid .alternator {
+  background-image: url(../img/alternator.png);
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+}
+
 .breadcrumb {
   background: #f2f2f2;
   padding: 1em 2em;
@@ -978,6 +1133,11 @@ tr:nth-child(even) {
 .breadcrumb li a {
   text-decoration: none;
   color: #0c9bd2;
+}
+
+.breadcrumb li a:hover {
+  text-decoration: underline;
+  color: #333;
 }
 
 footer {
