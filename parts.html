@@ -19,6 +19,9 @@
   <link rel="stylesheet" href="css/media.css">
 
   <meta name="theme-color" content="#0c9bd2">
+
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -109,8 +112,8 @@
               <li>
                 <a href="#">&rarr; Датчик за накладки</a>
               </li>
-              <li>
-                <a class="view-all" href="#">Вижте всички</a>
+              <li class="view-all">
+                <a href="#">Вижте всички</a>
               </li>
             </ul>
           </nav>
@@ -131,8 +134,8 @@
               <li>
                 <a href="#">&rarr; Накладки ръчна спирачка</a>
               </li>
-              <li>
-                <a class="view-all" href="#">Вижте всички</a>
+              <li class="view-all">
+                <a href="#">Вижте всички</a>
               </li>
             </ul>
           </nav>
@@ -153,8 +156,8 @@
               <li>
                 <a href="#">&rarr; Лагер на макферсон</a>
               </li>
-              <li>
-                <a class="view-all" href="#">Вижте всички</a>
+              <li class="view-all">
+                <a href="#">Вижте всички</a>
               </li>
             </ul>
           </nav>
@@ -175,8 +178,8 @@
               <li>
                 <a href="#">&rarr; Феродов диск</a>
               </li>
-              <li>
-                <a class="view-all" href="#">Вижте всички</a>
+              <li class="view-all">
+                <a href="#">Вижте всички</a>
               </li>
             </ul>
           </nav>
@@ -197,8 +200,8 @@
               <li>
                 <a href="#">&rarr; Зъбни колела</a>
               </li>
-              <li>
-                <a class="view-all" href="#">Вижте всички</a>
+              <li class="view-all">
+                <a href="#">Вижте всички</a>
               </li>
             </ul>
           </nav>
@@ -219,8 +222,8 @@
               <li>
                 <a href="#">&rarr; Фар за мъгла / халоген</a>
               </li>
-              <li>
-                <a class="view-all" href="#">Вижте всички</a>
+              <li class="view-all">
+                <a href="#">Вижте всички</a>
               </li>
             </ul>
           </nav>
@@ -241,8 +244,20 @@
               <li>
                 <a href="#">&rarr; Воден маркуч</a>
               </li>
-              <li>
-                <a class="view-all" href="#">Вижте всички</a>
+              <li class="hidden-cat">
+                <a href="#">&rarr; Воден радиатор</a>
+              </li>
+              <li class="hidden-cat">
+                <a href="#">&rarr; Интеркулер</a>
+              </li>
+              <li class="hidden-cat">
+                <a href="#">&rarr; Радиатор климатик</a>
+              </li>
+              <li class="hidden-cat">
+                <a href="#">&rarr; Воден маркуч</a>
+              </li>
+              <li class="view-all">
+                <a href="#">Вижте всички</a>
               </li>
             </ul>
           </nav>
@@ -263,8 +278,8 @@
               <li>
                 <a href="#">&rarr; Моторче за чистачки</a>
               </li>
-              <li>
-                <a class="view-all" href="#">Вижте всички</a>
+              <li class="view-all">
+                <a href="#">Вижте всички</a>
               </li>
             </ul>
           </nav>
@@ -285,8 +300,8 @@
               <li>
                 <a href="#">&rarr; Преден капак</a>
               </li>
-              <li>
-                <a class="view-all" href="#">Вижте всички</a>
+              <li class="view-all">
+                <a href="#">Вижте всички</a>
               </li>
             </ul>
           </nav>
@@ -307,8 +322,20 @@
               <li>
                 <a href="#">&rarr; Превключватели</a>
               </li>
-              <li>
-                <a class="view-all" href="#">Вижте всички</a>
+              <li class="hidden-cat">
+                <a href="#">&rarr; Алтернатор</a>
+              </li>
+              <li class="hidden-cat">
+                <a href="#">&rarr; Реле регулатор</a>
+              </li>
+              <li class="hidden-cat">
+                <a href="#">&rarr; Стартер</a>
+              </li>
+              <li class="hidden-cat">
+                <a href="#">&rarr; Превключватели</a>
+              </li>
+              <li class="view-all link">
+                <a href="#">Вижте всички</a>
               </li>
             </ul>
           </nav>
@@ -437,37 +464,15 @@
     </div>
   </footer>
   <script>
-    function minusClick() {
-      var i = document.getElementById("quantity").value;
-      if (i==="1") {
+    $(document).ready(function () {
+      $(".view-all").click(function () {
+        var asd = $(this).parent().find(".hidden-cat");
+        asd.slideToggle("fast", "swing");        
+        $("a", this).text($("a", this).text() == 'Вижте всички' ? "Вижте по-малко" : "Вижте всички");
         return false;
-      }
-      document.getElementById("quantity").value = --i;
-    }
-    function plusClick() {
-      var i = document.getElementById("quantity").value;
-      document.getElementById("quantity").value = ++i;
-    }    
-    function rudrSwitchTab(rudr_tab_id, rudr_tab_content) {
-        // first of all we get all tab content blocks (I think the best way to get them by class names)
-        var x = document.getElementsByClassName("tabcontent");
-        var i;
-        for (i = 0; i < x.length; i++) {
-          x[i].style.display = 'none'; // hide all tab content
-        }
-        document.getElementById(rudr_tab_content).style.display = 'block'; // display the content of the tab we need
-
-        // now we get all tab menu items by class names (use the next code only if you need to highlight current tab)
-        var x = document.getElementsByClassName("tabmenu");
-        var i;
-        for (i = 0; i < x.length; i++) {
-          x[i].className = 'tabmenu';
-        }
-        document.getElementById(rudr_tab_id).className = 'tabmenu active';
-      }
+      });
+    });
   </script>
-  <script src="https://code.jquery.com/jquery-3.4.1.min.js"
-    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 </body>
 
 </html>

@@ -1,21 +1,24 @@
-@media (max-width: 1366px) {
-  header .top {
-    padding: 1em 2em;
+
+  header .top img { 
+    width: 2em; 
+  }
+  
+  header .middle .logo img { 
+    width: 80%; 
   }
 
-  header .middle {
-    padding: 2em 2em;
+  header .search input { 
+    background-size: 2em; font-size: 0.8em; 
   }
 
-  header nav {
-    padding: 1em 2em;
+  header .search input:focus { 
+    background-size: 2em;
   }
 
-  footer .logo {
-    padding: 0 0 0 2em !important;
-  }
+  header .profile img { 
+    width: 2em; 
+  }	
 
-  .copyright {
-    padding: 0 0 0 2em !important;
+  .fav-categories .categories { 
+    padding: 1em; 
   }
-}
