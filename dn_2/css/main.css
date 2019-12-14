@@ -152,8 +152,8 @@ header .middle .logo {
 header .middle .logo a {
   background: url(../img/logo.png);
   background-size: contain;
-  height: 70px;
-  width: 140px;
+  height: 50px;
+  width: 100px;
   display: block;
 }
 
@@ -172,7 +172,7 @@ header .middle .search input {
   background-position: 15px 8px;
   border: 1px solid var(--grey-color);
   border-radius: 20px;
-  width: 22em;
+  width: 1em;
   transition: all 0.5s ease;  
   outline: none;
 }
@@ -244,6 +244,27 @@ header .middle .user .cart span {
   border-radius: 10px;
 }
 
+header .mob_search input {
+  padding: 10px 20px 10px 45px;
+  background: #fff;
+  background-image: url(../img/search.svg);
+  background-repeat: no-repeat;
+  background-size: 1.4em;
+  background-position: 15px 8px;
+  border: 1px solid var(--grey-color);
+  border-left: 0;
+  border-right: 0;
+  outline: none;
+  width: 100%;
+}
+
+header .mob_search input:focus {
+  border: 1px solid var(--main-color);  
+  border-left: 0;
+  border-right: 0;  
+  background-image: url(../img/search_active.svg);
+}
+
 header nav {
   background: #fff;
   border-top: 1px solid var(--main-color);
@@ -265,7 +286,7 @@ header nav li a {
   padding: 15px 15px;
   border-bottom: 1px solid var(--grey-color);
   display: block;
-  text-align: right;
+  text-align: center;
 }
 
 header nav li a:hover {
