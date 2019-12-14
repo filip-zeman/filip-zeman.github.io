@@ -119,18 +119,37 @@ p {
   margin: 0;
 }
 
-header {
+header .middle {
   background: #fff;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-header .logo {
+header .top {
+  display: none;
+  padding: 5px 15px;
+  background: #fafafa;
+  border-bottom: 1px solid var(--grey-color);
+  font-size: 0.9em;
+  font-family: 'Roboto Condensed';
+  font-weight: 300;
+}
+
+header .top img {
+  width: 16px;
+  margin-right: 5px;
+}
+
+header .top div {
+  margin-right: 15px;
+}
+
+header .middle .logo {
   flex: 1;
 }
 
-header .logo a {
+header .middle .logo a {
   background: url(../img/logo.png);
   background-size: contain;
   height: 70px;
@@ -138,13 +157,13 @@ header .logo a {
   display: block;
 }
 
-header .search {
+header .middle .search {
   flex: 1;
   display: flex;
   justify-content: center;
 }
 
-header .search input {
+header .middle .search input {
   padding: 10px 20px 10px 45px;
   background: #fff;
   background-image: url(../img/search.svg);
@@ -153,66 +172,106 @@ header .search input {
   background-position: 15px 8px;
   border: 1px solid var(--grey-color);
   border-radius: 20px;
-  width: 21em;
+  width: 22em;
   transition: all 0.5s ease;  
+  outline: none;
 }
 
-header .search input:focus {
+header .middle .search input:focus {
   border: 1px solid var(--main-color);  
   background-image: url(../img/search_active.svg);
-  width: 30em;
+  width: 25em;
   transition: all 0.5s ease;  
 }
 
-header .user {
+header .middle .user {
   flex: 1;
   display: flex;
-  justify-content: right;
+  justify-content: flex-end;
   padding: 0 15px 0 0;
 }
 
-header .user a {
+header .middle .user a {
   display: flex;
-  width: 36px;
-  height: 36px;
+  width: 24px;
+  height: 24px;
   text-decoration: none;
   justify-content: center;
   align-items: center;
 }
 
-header .user .profile {
+header .middle .user .profile {
   background: url(../img/profile.svg);
-  margin-right: 20px;
+  margin-right: 10px;
 }
 
-header .user .profile:hover {
+header .middle .user .profile:hover {
   background: url(../img/profile_hover.svg);
 }
 
-header .user .cart {
-  background: url(../img/cart.svg);
-}
-
-header .user .cart:hover {
-  background: url(../img/cart_hover.svg);
-}
-
-header .user .garage {
+header .middle .user .garage {
   background: url(../img/garage.svg);
-  margin-right: 20px;
+  margin-right: 10px;
 }
 
-header .user .garage:hover {
+header .middle .user .garage:hover {
   background: url(../img/garage_hover.svg);
 }
 
-header .user .cart span {
+header .middle .user .cart {
+  background: url(../img/cart.svg);
+  margin-right: 30px;
+}
+
+header .middle .user .cart:hover {
+  background: url(../img/cart_hover.svg);
+}
+
+header .middle .user .menu {
+  background: url(../img/menu.svg);
+}
+
+header .middle .user .close {
+  background: url(../img/menu_close.svg);
+}
+
+header .middle .user .cart span {
   color: #fff;
   background: var(--main-color);
   padding: 0 5px;
   font-size: 0.8em;
   font-weight: 700;
   border-radius: 10px;
+}
+
+header nav {
+  background: #fff;
+  border-top: 1px solid var(--main-color);
+}
+
+header nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+header nav li {
+}
+
+header nav li a {
+  text-decoration: none;
+  color: var(--text-color);
+  font-weight: 700;
+  padding: 15px 15px;
+  border-bottom: 1px solid var(--grey-color);
+  display: block;
+  text-align: right;
+}
+
+header nav li a:hover {
+  color: #fff;
+  background: var(--main-color);
+  /*background-image: linear-gradient(145deg, var(--main-color), var(--secondary-color));*/
 }
 
 /* ==========================================================================
