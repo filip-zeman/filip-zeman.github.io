@@ -5,4 +5,7 @@ $(function () {
     nav.toggleClass('hidden');
     button.toggleClass('close');
   });
+  $(".item").on('click', function () {
+    $(this).children(".li").toggleClass('hidden');
+  });
 });

@@ -263,12 +263,10 @@ header .mob_search input {
 
 header .mob_search input:focus {
   border-top: 1px solid var(--main-color);  
-  background: #333;
   background-image: url(../img/search_active.svg);
   background-repeat: no-repeat;
   background-size: 1.4em;
   background-position: 15px 8px;
-  color: #fff;
 }
 
 header nav {
@@ -299,6 +297,13 @@ header nav li a:hover {
   color: #fff;
   background: var(--main-color);
   /*background-image: linear-gradient(145deg, var(--main-color), var(--secondary-color));*/
+}
+
+.banner_1 {
+  background: url(../img/banner_1.png);
+  background-repeat: no-repeat;
+  height: 237px;
+  display: block;
 }
 
 /* ==========================================================================
