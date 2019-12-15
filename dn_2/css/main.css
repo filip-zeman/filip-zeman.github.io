@@ -237,11 +237,14 @@ header .middle .user .close {
 
 header .middle .user .cart span {
   color: #fff;
-  background: var(--main-color);
+  background: red;
+  position:relative;
+  top: -9px;
+  left: 15px;
   padding: 0 5px;
   font-size: 0.8em;
-  font-weight: 700;
-  border-radius: 10px;
+  font-weight: 400;
+  border-radius: 40px;
 }
 
 header .mob_search input {
@@ -259,10 +262,13 @@ header .mob_search input {
 }
 
 header .mob_search input:focus {
-  border: 1px solid var(--main-color);  
-  border-left: 0;
-  border-right: 0;  
+  border-top: 1px solid var(--main-color);  
+  background: #333;
   background-image: url(../img/search_active.svg);
+  background-repeat: no-repeat;
+  background-size: 1.4em;
+  background-position: 15px 8px;
+  color: #fff;
 }
 
 header nav {
