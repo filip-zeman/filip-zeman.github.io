@@ -303,7 +303,7 @@ header nav li a:hover {
   background: url(../img/banner_1.png);
   background-repeat: no-repeat;
   height: 237px;
-  display: block;
+  width: 375px;
 }
 
 /* ==========================================================================
