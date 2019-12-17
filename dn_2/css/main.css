@@ -101,9 +101,11 @@ textarea {
   /* Variables */
 
 :root {
-  --background-color: #ecfcff;
+  --background-color: #fbfbfb;
   --text-color: #333;
   --grey-color: #e5e5e5;
+  --grey-color-2: #ccc;
+  --white-color: #fff;
   --main-color: #3e64ff;
   --secondary-color: #5edfff;
   --tertiary-color: #b2fcff;
@@ -119,21 +121,31 @@ p {
   margin: 0;
 }
 
+header {
+  position: sticky;
+  box-shadow: 0px 6px 8px -4px rgba(0,0,0,0.15);
+}
+
 header .middle {
-  background: #fff;
+  background: var(--white-color);
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
 header .top {
-  display: none;
+  display: flex;
   padding: 5px 15px;
-  background: #fafafa;
-  border-bottom: 1px solid var(--grey-color);
+  background: var(--text-color);
+  color: var(--grey-color-2);
   font-size: 0.9em;
   font-family: 'Roboto Condensed';
   font-weight: 300;
+}
+
+header .top a {
+  text-decoration: none !important;
+  color: inherit;
 }
 
 header .top img {
@@ -165,7 +177,7 @@ header .middle .search {
 
 header .middle .search input {
   padding: 10px 20px 10px 45px;
-  background: #fff;
+  background: var(--white-color);
   background-image: url(../img/search.svg);
   background-repeat: no-repeat;
   background-size: 1.4em;
@@ -236,7 +248,7 @@ header .middle .user .close {
 }
 
 header .middle .user .cart span {
-  color: #fff;
+  color: var(--white-color);
   background: red;
   position:relative;
   top: -9px;
@@ -249,7 +261,7 @@ header .middle .user .cart span {
 
 header .mob_search input {
   padding: 10px 20px 10px 45px;
-  background: #fff;
+  background: var(--white-color);
   background-image: url(../img/search.svg);
   background-repeat: no-repeat;
   background-size: 1.4em;
@@ -259,10 +271,11 @@ header .mob_search input {
   border-right: 0;
   outline: none;
   width: 100%;
+  font-size: 0.8em;
 }
 
 header .mob_search input:focus {
-  border-top: 1px solid var(--main-color);  
+  border-bottom: 1px solid var(--main-color);  
   background-image: url(../img/search_active.svg);
   background-repeat: no-repeat;
   background-size: 1.4em;
@@ -270,8 +283,12 @@ header .mob_search input:focus {
 }
 
 header nav {
-  background: #fff;
+  background: var(--white-color);
   border-top: 1px solid var(--main-color);
+  display: none;
+  position: absolute;
+  width: 100%;
+  z-index: 9999;
 }
 
 header nav ul {
@@ -291,19 +308,156 @@ header nav li a {
   border-bottom: 1px solid var(--grey-color);
   display: block;
   text-align: center;
+  font-size: 0.8em;
 }
 
 header nav li a:hover {
-  color: #fff;
+  color: var(--white-color);
   background: var(--main-color);
   /*background-image: linear-gradient(145deg, var(--main-color), var(--secondary-color));*/
 }
 
+.garage_info {
+  border-top: 1px solid var(--grey-color);
+}
+
+.garage_info .vehicle {
+  background: var(--white-color);
+  padding: 0 15px 0 0;
+  display: grid;
+  grid-template-columns: 100px auto;
+  grid-column-gap: 10px;
+  border-bottom: 1px solid var(--grey-color);
+}
+
+.garage_info img {
+  width: 100%;
+  height: 100%;
+}
+
+.garage_info .info {
+  padding: 5px 0;
+}
+
+.garage_info .vehicle_select {
+  overflow: hidden;
+  padding: 10px;
+  background: var(--white-color);
+  border-bottom: 1px solid var(--grey-color);
+}
+
+.garage_info .vehicle_select form {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
+  grid-gap: 10px;
+}
+
+.garage_info .vehicle_select select {
+
+}
+
+.wrap {
+  width: 100%;
+}
+
 .banner_1 {
+  display: block;
   background: url(../img/banner_1.png);
   background-repeat: no-repeat;
-  height: 237px;
+  height: 200px;
   width: 375px;
+}
+
+.promo_parts {
+  padding: 15px;
+}
+
+.section_title {
+  margin: 0;
+  font-weight: 700;
+  font-family: "Roboto Condensed";
+  font-size: 1.6em;
+}
+
+.section_title:after {
+  content: "";
+  padding-top: 5px;
+  width: 30%;
+  display: block;
+  border-bottom: 3px solid var(--main-color);
+}
+
+.promo_parts .parts {
+  padding: 15px 0;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  grid-gap: 15px;
+}
+
+.promo_parts .part {
+  padding: 10px;
+  border: 1px solid #000;
+}
+
+.promo_parts .part .part_photo {
+  width: 100%;
+}
+
+.promo_parts .part .part_title {
+  font-weight: 400;
+  font-size: 1em;
+  margin: 10px 0;
+  padding: 0;
+}
+
+.promo_parts .part .part_info {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: minmax(0,1fr) minmax(0,2fr);
+  font-family: "Roboto Condensed";
+}
+
+.promo_parts .part_info .discount {
+  font-weight: 700;
+  color: red;
+  font-size: 1.4em;
+  display: flex;
+  align-items: center;  
+}
+
+.promo_parts .part_info .price {
+  text-align: right;
+}
+
+.promo_parts .part_info .price .old_price {
+  color: var(--grey-color-2);
+  text-decoration: line-through;
+}
+
+.promo_parts .part_info .price .new_price {
+  font-weight: 700;
+}
+
+.promo_parts .part_info .brand img {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.promo_parts .part_info .add_to_cart {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.promo_parts .part_info .add_to_cart a {
+  display: block;
+  text-align: center;
+  border-radius: 10px;
+  background: var(--main-color);
+  color: var(--white-color);
+  padding: 5px 10px;
+  text-decoration: none;
+  font-weight: 700;
 }
 
 /* ==========================================================================
