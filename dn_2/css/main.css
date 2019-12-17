@@ -115,6 +115,7 @@ body {
   font-family: 'Roboto', sans-serif;
   color: var(--text-color);
   background-color: var(--background-color);
+  overflow-x: hidden;
 }
 
 p {
@@ -226,7 +227,7 @@ header .middle .user .garage {
   margin-right: 10px;
 }
 
-header .middle .user .garage:hover {
+header .middle .user .garage_active {
   background: url(../img/garage_hover.svg);
 }
 
@@ -235,7 +236,7 @@ header .middle .user .cart {
   margin-right: 30px;
 }
 
-header .middle .user .cart:hover {
+header .middle .user .cart_active {
   background: url(../img/cart_hover.svg);
 }
 
@@ -360,18 +361,6 @@ header nav li a:hover {
   width: 100%;
 }
 
-.banner_1 {
-  display: block;
-  background: url(../img/banner_1.png);
-  background-repeat: no-repeat;
-  height: 200px;
-  width: 375px;
-}
-
-.promo_parts {
-  padding: 15px;
-}
-
 .section_title {
   margin: 0;
   font-weight: 700;
@@ -387,6 +376,18 @@ header nav li a:hover {
   border-bottom: 3px solid var(--main-color);
 }
 
+.banner_1 {
+  display: block;
+  background: url(../img/banner_1.png);
+  background-repeat: no-repeat;
+  height: 200px;
+  width: 375px;
+}
+
+.promo_parts {
+  padding: 15px;
+}
+
 .promo_parts .parts {
   padding: 15px 0;
   display: grid;
@@ -396,7 +397,8 @@ header nav li a:hover {
 
 .promo_parts .part {
   padding: 10px;
-  border: 1px solid #000;
+  border: 1px solid var(--grey-color-2);
+  background: var(--white-color);
 }
 
 .promo_parts .part .part_photo {
@@ -408,6 +410,20 @@ header nav li a:hover {
   font-size: 1em;
   margin: 10px 0;
   padding: 0;
+}
+
+.promo_parts .part .part_number {
+  font-weight: 300;
+  font-size: 0.8em;
+  margin: 0;
+  padding: 0;
+  color: var(--grey-color-2);
+}
+
+.promo_parts .part .part_number a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: inherit;
 }
 
 .promo_parts .part .part_info {
@@ -438,10 +454,15 @@ header nav li a:hover {
   font-weight: 700;
 }
 
-.promo_parts .part_info .brand img {
+.promo_parts .part_info .brand {
   display: flex;
+  justify-content: center;
   align-items: center;
-  width: 100%;
+}
+
+.promo_parts .part_info .brand img {
+  width: 45px;
+  height: 21px;
 }
 
 .promo_parts .part_info .add_to_cart {
@@ -460,6 +481,82 @@ header nav li a:hover {
   font-weight: 700;
 }
 
+.fav_categories {
+  padding: 0 15px 15px 15px;
+}
+
+.fav_categories .fav_categories_grid {
+  padding: 15px 0 0 0;
+  display: grid;
+  grid-gap: 15px;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  grid-template-rows: repeat(5, minmax(0, 150px));
+}
+
+.fav_categories .fav_categories_grid a {
+  background: var(--grey-color-2);
+  display: grid;
+  grid-template-rows: minmax(0, 100px);
+  text-decoration: none;
+}
+
+.fav_categories .fav_categories_grid a div{
+  background: #000;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fav_categories .fav_categories_grid a .item_1 {
+  background: yellow;
+  background-image: url(../img/sparkplug_light.svg);
+}
+
+.fav_categories .fav_categories_grid a .item_2 {
+  background: lightgreen;
+  background-image: url(../img/starter.svg);
+}
+
+.fav_categories .fav_categories_grid a .item_3 {
+  background: skyblue;
+  background-image: url(../img/steering.svg);
+}
+
+.fav_categories .fav_categories_grid a .item_4 {
+  background: orange;
+  background-image: url(../img/shock.svg);
+}
+
+.fav_categories .fav_categories_grid a .item_5 {
+  background: lightcoral;
+  background-image: url(../img/sparkplug_light.svg);
+}
+
+.fav_categories .fav_categories_grid a .item_6 {
+  background: lightpink;
+  background-image: url(../img/starter.svg);
+}
+
+.fav_categories .fav_categories_grid a .item_7 {
+  background: burlywood;
+  background-image: url(../img/steering.svg);
+}
+
+.fav_categories .fav_categories_grid a .item_8 {
+  background: cyan;
+  background-image: url(../img/shock.svg);
+}
+
+.fav_categories .fav_categories_grid a .item_9 {
+  background: crimson;
+  background-image: url(../img/steering.svg);
+}
+
+.fav_categories .fav_categories_grid a .item_10 {
+  background: yellowgreen;
+  background-image: url(../img/shock.svg);
+}
 /* ==========================================================================
    Helper classes
    ========================================================================== */
