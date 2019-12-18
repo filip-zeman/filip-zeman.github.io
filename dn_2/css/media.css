@@ -1,0 +1,83 @@
+@media (max-width: 320px) {
+	.section_title {
+    font-size: 1.2em;
+  }
+
+  .contact h1 {
+    font-size: 1.2em;
+  }
+
+  .contact h2 {
+    font-size: 0.9em;
+  }
+
+  .contact .contact_item {
+    font-size: 0.8em;
+  }
+
+  .contact .contact_grid img {
+    width: 28px;
+    height: 28px;
+    margin-right: 15px;
+  }
+
+  .promo_parts .part .part_title {
+    font-size: 0.8em;
+  }
+
+  .promo_parts .part .part_number {
+    font-size: 0.7em;
+  }
+
+  .promo_parts .part_info .discount {
+    font-size: 1em;
+  }
+
+  .promo_parts .part_info .brand img {
+    width: 100%;
+    height: auto;
+  }
+
+  .promo_parts .part_info .add_to_cart a {
+    padding: 3px 7px;
+    font-size: 0.9em;
+  }
+
+  .fav_categories .fav_categories_grid a div {
+    background-size: 40%;
+  }
+
+  .fav_categories .fav_categories_grid a h1{
+    font-size: 0.7em;
+    text-transform: uppercase;
+  }
+
+  footer a {
+    font-size: 0.9em;
+  }
+
+  footer ul li:not(:last-child) {
+    margin-bottom: 0.2em;
+  }
+
+  footer ul li:first-child {
+    font-size: 1.2em;
+  }
+}
+
+@media (min-width: 768px) {
+  .fav_categories .fav_categories_grid {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
+    grid-template-rows: minmax(0, 150px);
+  }
+
+  .brands {
+    grid-template-columns: repeat(8, minmax(0, 1fr));
+    grid-template-rows: 100px;
+  }
+
+  .brands a img {
+    max-width: 100px;
+    max-height: 100px;
+  }
+}
