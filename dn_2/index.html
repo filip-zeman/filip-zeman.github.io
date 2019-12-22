@@ -14,7 +14,7 @@
   <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&display=swap&subset=cyrillic,cyrillic-ext,latin-ext" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700,700i&display=swap&subset=cyrillic,cyrillic-ext,latin-ext" rel="stylesheet">
 
-
+  <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/media.css">
@@ -34,16 +34,18 @@
       </div>
     </div>
     <div class="middle">
-      <div class="logo">
-        <a href="#"></a>
-      </div>
-      <div class="search">
-        <input type="search" placeholder="Търсете по номер на част или VIN">
-      </div>
-      <div class="user">
-        <a href="#" class="garage"></a>
-        <a href="#" class="cart"><span>3</span></a>
-        <a href="#" class="menu"></a>
+      <div class="inner">
+        <div class="logo">
+          <a href="#"></a>
+        </div>
+        <div class="search">
+          <input type="search" placeholder="Търсете по номер на част или VIN">
+        </div>
+        <div class="user">
+          <a href="#" class="garage"></a>
+          <a href="#" class="cart"><span>3</span></a>
+          <a href="#" class="menu"></a>
+        </div>
       </div>
     </div>
     <nav>
@@ -60,6 +62,8 @@
         <li><a href="#">Гуми</a></li>
       </ul>
     </nav>
+  </header>
+  <div class="wrap">
     <div class="garage_info">
       <div class="vehicle_select">
         <form>
@@ -207,7 +211,8 @@
               <option value="4489">LT 40-55 I Бордова платформа / Шаси (293-909) (04.1975 - 06.1996)</option>
               <option value="3378">LT 28-35 II Микробус (04.1996 - 07.2006)</option>
               <option value="3379">LT 28-46 II Ван (2DA, 2DD, 2DH) (04.1996 - 07.2006)</option>
-              <option value="3380">LT 28-46 II Бордова платформа / Шаси (2DC, 2DF, 2DG, 2DL, 2DM) (04.1996 - 07.2006)</option>
+              <option value="3380">LT 28-46 II Бордова платформа / Шаси (2DC, 2DF, 2DG, 2DL, 2DM) (04.1996 - 07.2006)
+              </option>
             </optgroup>
             <optgroup label="LUPO">
               <option value="3398">Lupo / Lupo 3L (6X1, 6E1) (09.1998 - 07.2005)</option>
@@ -323,11 +328,13 @@
               <option value="1631">Transporter T4 Ван (70A, 70H, 7DA, 7DH) (07.1990 - 04.2003)</option>
               <option value="1632">Transporter T4 Бордова платформа / Шаси (70E, 70L, 70M, 7DE, 7DL, 7D) (07.1990 - 04.2003)
               </option>
-              <option value="463">Transporter T4 Микробус (70B, 70C, 7DB, 7DK, 70J, 70K, 7DC, 7DJ) (09.1990 - 06.2003)</option>
+              <option value="463">Transporter T4 Микробус (70B, 70C, 7DB, 7DK, 70J, 70K, 7DC, 7DJ) (09.1990 - 06.2003)
+              </option>
               <option value="10442">Transporter Standard Passenger Van (09.1992 - 12.1994)</option>
               <option value="5005">Transporter T5 Микробус (7HB, 7HJ, 7EB, 7EJ, 7EF, 7EG, 7HF, 7EC) (04.2003 - ...)</option>
               <option value="5004">Transporter T5 Ван (7HA, 7HH, 7EA, 7EH) (04.2003 - ...)</option>
-              <option value="5003">Transporter T5 Бордова платформа / Шаси (7JD, 7JE, 7JL, 7JY, 7JZ, 7FD) (04.2003 - ...)</option>
+              <option value="5003">Transporter T5 Бордова платформа / Шаси (7JD, 7JE, 7JL, 7JY, 7JZ, 7FD) (04.2003 - ...)
+              </option>
               <option value="14350">Transporter T6 Микробус (SGB, SGG, SGJ) (04.2015 - ...)</option>
               <option value="14351">Transporter T6 Ван (SGA, SGH) (04.2015 - ...)</option>
               <option value="14352">Transporter T6 Бордова платформа / Шаси (SFD, SFE, SFL, SFZ) (04.2015 - ...)</option>
@@ -372,7 +379,8 @@
       </div>
       <div class="vehicle">
         <div class="img">
-          <img src="https://www.autopower.bg/images/model_type/Audi%20100%20Sedan%20(4A,%20C4).jpg" alt="Авточасти за Audi 100 Sedan (4A, C4) 2.0 E quattro - 115 коня бензин AAD">
+          <img src="https://www.autopower.bg/images/model_type/Audi%20100%20Sedan%20(4A,%20C4).jpg"
+            alt="Авточасти за Audi 100 Sedan (4A, C4) 2.0 E quattro - 115 коня бензин AAD">
         </div>
         <div class="info">
           <strong>Audi 100 Sedan (4A, C4)</strong><br />
@@ -381,11 +389,14 @@
         </div>
       </div>
     </div>
-  </header>
-  <div class="banner">
-    <a href="#" class="banner_1">Тук ще има банер</a>
-  </div>
-  <div class="wrap">
+    <div class="banner">
+      <div class="bnr banner_1">
+        <a href="#"></a>
+      </div>
+      <div class="bnr banner_2">
+        <a href="#"></a>
+      </div>
+    </div>
     <div class="promo_parts">
       <h1 class="section_title">Продукти на промоция</h1>
       <div class="parts">
@@ -525,82 +536,8 @@
         </a>
       </div>
     </div>
-    <div class="brands">
-      <a href="#">
-        <img src="img/sachs.jpg">
-      </a>
-      <a href="#">
-        <img src="img/luk.png">
-      </a>
-      <a href="#">
-        <img src="img/bilstein.png">
-      </a>
-      <a href="#">
-        <img src="img/bosch.png">
-      </a>
-      <a class="href="#">
-        <img src="img/sachs.jpg">
-      </a>  
-      <a href="#">
-        <img src="img/luk.png">
-      </a>
-      <a href="#">
-        <img src="img/bilstein.png">
-      </a>
-      <a href="#">
-        <img src="img/bosch.png">
-      </a>
-      <a href="#">
-        <img src="img/sachs.jpg">
-      </a>
-      <a href="#">
-        <img src="img/luk.png">
-      </a>
-      <a href="#">
-        <img src="img/bilstein.png">
-      </a>
-      <a href="#">
-        <img src="img/bosch.png">
-      </a>
-      <a class="href=" #">
-        <img src="img/sachs.jpg">
-      </a>
-      <a href="#">
-        <img src="img/luk.png">
-      </a>
-      <a href="#">
-        <img src="img/bilstein.png">
-      </a>
-      <a href="#">
-        <img src="img/bosch.png">
-      </a>
-      <a href="#">
-        <img src="img/sachs.jpg">
-      </a>
-      <a href="#">
-        <img src="img/luk.png">
-      </a>
-      <a href="#">
-        <img src="img/bilstein.png">
-      </a>
-      <a href="#">
-        <img src="img/bosch.png">
-      </a>
-      <a class="href=" #">
-        <img src="img/sachs.jpg">
-      </a>
-      <a href="#">
-        <img src="img/luk.png">
-      </a>
-      <a href="#">
-        <img src="img/bilstein.png">
-      </a>
-      <a href="#">
-        <img src="img/bosch.png">
-      </a>
-    </div>
     <div class="contact">
-      <h1>Не сте сигурни в избора си?</h1>
+      <h1>За връзка с нас</h1>
       <h2>Колебаете се или имате въпроси? Ние сме тук, ето как да се свържете с нас:</h2>
       <div class="contact_grid">
         <div class="contact_item">
@@ -659,9 +596,9 @@
       </ul>
     </div>
   </footer>
-  <script src="js/vendor/modernizr-3.7.1.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
   <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.4.1.min.js"><\/script>')</script>
+  <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
   <script src="js/plugins.js"></script>
   <script src="js/main.js"></script>
 

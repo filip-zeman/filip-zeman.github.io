@@ -23,7 +23,7 @@ $(function () {
 
   }
 
-  var garage = $('header .garage_info');
+  var garage = $('.wrap .garage_info');
   var buttongarage = $('header .garage');
 
   buttongarage.on('click', function () {
@@ -34,8 +34,29 @@ $(function () {
   $(".garage_info").hide();
   
   $(document).on("click", function (event) {
-    if (!$(event.target).closest("header .garage_info").length && !$(event.target).closest("header .garage").length) {
-      $("header .garage_info:visible").toggle();
+    if (!$(event.target).closest(".wrap .garage_info").length && !$(event.target).closest("header .garage").length) {
+      $(".wrap .garage_info:visible").toggle();
     }
   });
+
+  $('.banner').flickity({
+    // options
+    cellAlign: "left",
+    autoPlay: 3000,
+    prevNextButtons: false,
+    wrapAround: true,
+    contain: true,
+    pageDots: false
+  });
+
+  setInterval(function () { 
+  
+    if ($(window).width() < 1280) {
+
+    //  $(".banner .bnr a").css("width", $(window).width());
+
+    }
+  
+  }, 3000);
+
 });
