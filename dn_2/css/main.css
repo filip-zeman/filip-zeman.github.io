@@ -330,10 +330,19 @@ header nav li a:active {
 }
 
 .garage_info {
-  border-top: 1px solid var(--grey-color);
-  position: absolute;
-  z-index:9999;
   max-width: 1280px;
+  background: var(--main-color);
+  position: relative;
+  top: -30px;
+}
+
+.garage_info h1 {
+  padding: 15px 15px 0 15px;
+  color: var(--white-color);
+}
+
+.garage_info h1:after {
+  border-bottom: 3px solid var(--white-color);
 }
 
 .garage_info .vehicle {
@@ -342,7 +351,6 @@ header nav li a:active {
   display: grid;
   grid-template-columns: 100px auto;
   grid-column-gap: 10px;
-  border-bottom: 1px solid var(--grey-color);
 }
 
 .garage_info img {
@@ -356,9 +364,8 @@ header nav li a:active {
 
 .garage_info .vehicle_select {
   overflow: hidden;
-  padding: 10px;
-  background: var(--white-color);
-  border-bottom: 1px solid var(--grey-color);
+  padding: 10px 10px 15px 10px;
+  background: var(--main-color);
 }
 
 .garage_info .vehicle_select form {
@@ -597,6 +604,67 @@ header nav li a:active {
   background-image: url(../img/luk.png);
   background-repeat: no-repeat;
   background-position: center;
+}
+
+.product {
+  margin: 15px 0 15px 0;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-row-gap: 15px;
+}
+
+.product .product_photos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+}
+
+.product .product_photos img {
+  width: 100%;
+}
+
+.product .product_info {
+  padding: 15px;
+  margin: 0 15px;
+  border: 1px solid var(--grey-color-2);
+  border-radius: 15px;
+}
+
+.product .product_info h1 {
+  margin: 0;
+  padding: 0;
+  font-weight: 700;
+  font-size: 1.2em;
+}
+
+.product .product_info h2 {
+  margin: 0;
+  padding: 0;
+  font-weight: 300;
+  color: var(--grey-color-2);
+  font-size: 1em;
+}
+
+.product .product_info h3 {
+  margin: 15px 0;
+  padding: 0;
+  font-weight: 700;
+  font-size: 1em;
+}
+
+.product .product_info h3 img {
+  max-width: 2em;
+}
+
+.product .product_info .old_price {
+  text-decoration: line-through;
+  color: var(--grey-color-2);
+}
+
+.product .product_info .new_price {
+  color: var(--main-color);
+  font-weight: 700;
 }
 
 .contact {

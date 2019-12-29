@@ -23,6 +23,8 @@ $(function () {
 
   }
 
+  /*$(".garage_info").hide();
+
   var garage = $('.wrap .garage_info');
   var buttongarage = $('header .garage');
 
@@ -30,14 +32,16 @@ $(function () {
     garage.toggle();
     buttongarage.toggleClass("garage_active");
   });
-
-  $(".garage_info").hide();
   
   $(document).on("click", function (event) {
     if (!$(event.target).closest(".wrap .garage_info").length && !$(event.target).closest("header .garage").length) {
       $(".wrap .garage_info:visible").toggle();
+      buttongarage.toggleClass("garage_active");
     }
-  });
+  });*/
+
+  // Select2 initiate
+  $(".vehicle_select form select").select2();
 
   $('.banner').flickity({
     // options

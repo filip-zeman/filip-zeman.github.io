@@ -232,11 +232,13 @@
   header nav li a {
     font-weight: 500;
     border-bottom: 0;
+    box-shadow: inset 0px -1px 0px 0px transparent;
+    transition: all 0.2s ease;  
   }
 
   header nav li a:hover {
-    color: var(--white-color);
-    background: var(--text-color);
+    box-shadow: inset 0px -5px 0px 0px var(--main-color);
+    transition: all 0.2s ease;  
   }
 
   .promo_parts .part {
