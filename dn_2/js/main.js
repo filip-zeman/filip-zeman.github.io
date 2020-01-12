@@ -12,7 +12,7 @@ $(function () {
     navToggle();
   });
 
-  if ($(window).width() < 768) {
+  if ($(window).width() < 1024) {
 
     $(document).on("click", function (event) {
       if ($("header nav").is(":visible") && !$(event.target).closest("header nav").length && !$(event.target).closest(".menu").length) {
@@ -23,9 +23,9 @@ $(function () {
 
   }
 
-  /*$(".garage_info").hide();
+  //$(".garage_info").hide();
 
-  var garage = $('.wrap .garage_info');
+  /*var garage = $('.wrap .garage_info');
   var buttongarage = $('header .garage');
 
   buttongarage.on('click', function () {
@@ -62,5 +62,16 @@ $(function () {
     }
   
   }, 3000);
+
+  $("header .middle .user .garage .expand ul li img").click(function(){
+    $(this).closest("li").remove();
+  });
+  
+  $("header .middle .user .garage-button").hover(
+    function(){
+      $(".expand", this).stop(true).fadeIn(100);
+    }, function() {
+      $(".expand", this).stop(true).fadeOut(100);
+  });
 
 });

@@ -11,6 +11,10 @@
    Base styles: opinionated defaults
    ========================================================================== */
 
+* {
+  box-sizing: border-box !important;
+}
+
 html {
   color: #222;
   font-size: 1em;
@@ -101,7 +105,7 @@ textarea {
   /* Variables */
 
 :root {
-  --background-color: #fbfbfb;
+  --background-color: #f3f3f3;
   --text-color: #333;
   --grey-color: #e5e5e5;
   --grey-color-2: #ccc;
@@ -211,43 +215,122 @@ header .middle .search input:focus {
 }
 
 header .middle .user {
-  flex: 1;
+  height: 100%;
   display: flex;
   justify-content: flex-end;
-  padding: 0 var(--padding-l) 0 0;
+  align-items: center;
   margin-left: auto;
+  flex: 1;
 }
 
 header .middle .user a {
+  width: 50px;
+  height: 50px;
+  border-left: 1px solid var(--grey-color-3);
+  background-size: 50% !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+}
+
+header .middle .user a:hover {
+  background-color: var(--grey-color-3);
+}
+
+header .middle .user .phone {
+  background-image: url(../img/call_3.svg);
+  background-position: 15px center !important;
+  background-size: 25px !important;
+  width: auto;
+  padding: 0 15px 0 50px;
   display: flex;
-  width: 24px;
-  height: 24px;
-  text-decoration: none;
-  justify-content: center;
   align-items: center;
+  color: inherit;
+  text-decoration: none;
+  font-family: "Roboto Condensed";
+}
+
+header .middle .user .phone {
+  display: none;
 }
 
 header .middle .user .profile {
-  background: url(../img/profile.svg);
-  margin-right: 10px;
-}
-
-header .middle .user .profile:hover {
-  background: url(../img/profile_hover.svg);
+  background-image: url(../img/profile.svg);
 }
 
 header .middle .user .garage {
-  background: url(../img/garage.svg);
-  margin-right: 10px;
+  background-image: url(../img/garage.svg);
+  color: var(--text-color);
+  text-decoration: none;
+  cursor: default;
+}
+
+header .middle .user .expand {
+  width: 450px;
+  position: relative;
+  left: -400px;
+  top: 80px;
+  background: #fff;
+  box-shadow: 0px 13px 38px -13px rgba(0,0,0,0.63);
+  border-radius: 0 0 15px 15px;
+  padding: 15px;
+  display: none;
+}
+
+header .middle .user .garage .expand img {
+  width: 15px;
+  cursor: pointer;
+}
+
+header .middle .user .garage .expand h1 {
+  font-weight: 400;
+  font-size: 1.4em;
+  margin: 0 0 10px 0;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--grey-color);
+  text-transform: uppercase;
+  font-family: "Roboto Condensed";
+}
+
+header .middle .user .garage .expand ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+header .middle .user .garage .expand ul li {
+  padding: 10px;
+}
+
+header .middle .user .garage .expand ul li:nth-child(even) {
+  background: var(--grey-color-3);
+}
+
+header .middle .user .garage .expand ul li:not(:last-of-type) {
+  border-bottom: 1px solid var(--grey-color-3);
+}
+
+header .middle .user .garage .expand ul li .row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header .middle .user .garage .expand span {
+  background:var(--main-color);
+  border-radius: 25px;
+  font-size: 0.8em;
+  padding: 5px 10px;
+  color: var(--white-color);
+  margin-right: 5px;
+  cursor: pointer;
 }
 
 header .middle .user .garage_active {
-  background: url(../img/garage_hover.svg);
+  background-image: url(../img/garage_hover.svg);
 }
 
 header .middle .user .cart {
   background: url(../img/cart.svg);
-  margin-right: 30px;
 }
 
 header .middle .user .cart_active {
@@ -275,12 +358,12 @@ header .middle .user .cart span {
 }
 
 header .mob_search input {
-  padding: 10px 20px 10px 45px;
+  padding: 15px 20px 15px 45px;
   background: var(--white-color);
   background-image: url(../img/search.svg);
   background-repeat: no-repeat;
   background-size: 1.4em;
-  background-position: 15px 8px;
+  background-position: 15px 12px;
   border: 1px solid var(--grey-color);
   border-left: 0;
   border-right: 0;
@@ -294,7 +377,7 @@ header .mob_search input:focus {
   background-image: url(../img/search_active.svg);
   background-repeat: no-repeat;
   background-size: 1.4em;
-  background-position: 15px 8px;
+  background-position: 15px 12px;
 }
 
 header nav {
@@ -323,17 +406,8 @@ header nav li a {
   font-size: 1em;
 }
 
-header nav li a:active {
-  color: var(--white-color);
-  background: var(--main-color);
-  /*background-image: linear-gradient(145deg, var(--main-color), var(--secondary-color));*/
-}
-
 .garage_info {
-  max-width: 1280px;
-  background: var(--white-color);
-  border-top: 1px solid var(--grey-color-3);
-  box-shadow: 0px 8px 8px -8px rgba(0,0,0,0.75);
+  background: var(--grey-color-2);
 }
 
 .garage_info h1 {
@@ -341,8 +415,20 @@ header nav li a:active {
   color: var(--text-color);
 }
 
+.garage_info h1 span img {
+  width: 0.8em;
+}
+
+.garage_info h2 {
+  padding: 0 15px 0 15px;
+  margin: 0;
+  font-weight: 400;
+  color: #555;
+  font-size: 0.8em;
+}
+
 .garage_info h1:after {
-  border-bottom: 3px solid var(--grey-color-3);
+  content: none;
 }
 
 .garage_info .vehicle {
@@ -365,13 +451,25 @@ header nav li a:active {
 .garage_info .vehicle_select {
   overflow: hidden;
   padding: 10px 10px 15px 10px;
-  background: var(--white-color);
+  box-sizing: border-box;
 }
 
 .garage_info .vehicle_select form {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
+  grid-template-columns: minmax(0, 1fr);
   grid-gap: 10px;
+  z-index: 9999999;
+}
+
+.garage_info .vehicle_select form button {
+  background: var(--main-color);
+  color: var(--white-color);
+  font-size: 0.8em;
+  padding: 10px 0;
+  text-transform: uppercase;
+  outline: 0;
+  border: 0;
+  font-weight: 700;
 }
 
 .wrap {
@@ -396,16 +494,19 @@ header nav li a:active {
 }
 
 .banner .bnr {
-  display: grid;
-  grid-template-columns: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 350px;
 }
 
-.banner .bnr a {
-  width: 320px;
-  height: 103px;
-  background-image: url(../img/banner_3.png);
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
+.banner .banner_1 {
+  background: var(--secondary-color);
+}
+
+.banner .banner_2 {
+  background: var(--tertiary-color);
 }
 
 .promo_parts {
@@ -422,8 +523,10 @@ header nav li a:active {
 .promo_parts .part {
   padding: 10px;
   box-shadow: 0 2px 2px 0 rgba(0,0,0,.14), 0 3px 1px -2px rgba(0,0,0,.2), 0 1px 5px 0 rgba(0,0,0,.12);
-  border: 1px solid transparent;
   background: var(--white-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .promo_parts .part .part_photo {
@@ -497,10 +600,10 @@ header nav li a:active {
 .promo_parts .part_info .add_to_cart a {
   display: block;
   text-align: center;
-  border-radius: 10px;
   background: var(--main-color);
   color: var(--white-color);
   padding: 5px 10px;
+  padding-bottom: 25px;
   max-height: 25px;
   text-decoration: none;
 }
@@ -754,7 +857,7 @@ footer .company_info .button {
   background: var(--background-color);
   padding: 15px;
   display: block;
-  width: 170px;
+  width: 200px;
   margin: 15px 0;
   border-bottom: 2px solid var(--grey-color);
 }
