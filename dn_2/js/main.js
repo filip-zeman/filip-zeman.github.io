@@ -12,6 +12,11 @@ $(function () {
     navToggle();
   });
 
+  $(".product .product_details .details_box .title a").on('click', function (e) {
+    $(this).closest(".details_box").find(".content").fadeToggle();
+    e.preventDefault();
+  });
+
   if ($(window).width() < 1024) {
 
     $(document).on("click", function (event) {
