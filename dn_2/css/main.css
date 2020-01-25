@@ -711,17 +711,18 @@ header nav li a {
 
 .product {
   margin: 0 auto 15px auto;
-  padding: 0 0 10px 0;
+  padding: 0;
   background: var(--white-color);
-  max-width: 425px;
-  
 }
 
 .product .product_title {
   display:flex;
-  justify-content: space-between;
   align-items: center;
-  padding: 30px 15px 15px 15px;
+  padding: 30px 15px 0 15px;
+}
+
+.product .product_title .title {
+  margin-left: 15px;
 }
 
 .product .product_title img {
@@ -755,7 +756,7 @@ header nav li a {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 15px 30px 15px;
+  padding: 0 15px 15px 15px;
   border-bottom: 1px solid var(--grey-color-2);
 }
 
@@ -791,6 +792,7 @@ header nav li a {
   font-size: 14px;
   font-weight: 400;
   text-decoration: none;
+  display: block;
 }
 
 .product .product_price .add_to_cart img {
