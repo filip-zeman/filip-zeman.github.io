@@ -118,6 +118,20 @@
   .footer_grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
+
+  .product {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    border-bottom: 1px solid var(--grey-color-2);
+  }
+
+  .product .product_price {
+    border-bottom: none;
+  }
+
+  .product .product_details .details_box {
+    box-shadow: 0px 0px 50px 0px rgba(0,0,0,0.20);
+  }
 }
 
 @media (min-width: 1024px) {
@@ -261,6 +275,7 @@ header .middle .user a {
     background: linear-gradient(145deg, #111, #333);
     color: #fff;
   }
+
 }
 
 @media (min-width: 1280px) {

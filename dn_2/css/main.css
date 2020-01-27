@@ -802,6 +802,13 @@ header nav li a {
 
 .product .product_details {
   padding: 15px 15px;
+  display: flex;
+  align-items: center;
+}
+
+.product .product_details .details_box {
+  border-radius: 10px 10px 0 0;
+  width: 100%;
 }
 
 .product .product_details .details_box .title {
@@ -823,6 +830,7 @@ header nav li a {
 
 .product .product_details .details_box .content {
   background: var(--grey-color-3);
+  border: 1px solid var(--grey-color);
 }
 
 .product .product_details .details_box .content ul {
