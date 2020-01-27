@@ -1,3 +1,4 @@
 {
-    "editor.fontFamily": "'JetBrains Mono', monospace"
+    "editor.fontFamily": "'JetBrains Mono', monospace",
+    "liveServer.settings.port": 81
 }
