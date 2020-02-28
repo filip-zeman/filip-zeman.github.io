@@ -1,1 +1,0 @@
-﻿window.elastic = {}; window.elastic.indexName = 'uat-f-20191031-001';  window.elastic.apiVersion = '2016-09-01'; window.elastic.apiKey = '659E8E307A0A15933C91A9CA910E243F'; window.elastic.apiRoot = 'https://waplazrass01.search.windows.net';
