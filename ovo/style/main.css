@@ -283,6 +283,12 @@ header nav a:hover {
     align-items: center;
 }
 
+.platform-promo__image img {
+
+    max-width: 100%;
+  
+}
+
 .live-quotes {
     background: #232337;
     padding: 30px 5%;
