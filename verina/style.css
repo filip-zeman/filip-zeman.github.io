@@ -68,7 +68,7 @@ header .inner h1 {
 header .inner h2 {
     color: #FDDE3D;
     font-size: 2.5em;
-    font-weight: 700;
+    font-weight: 500;
     font-style: italic;
     margin: 0;
 }
@@ -77,11 +77,11 @@ header .inner h2 {
     width: var(--site-width);
     padding: 2em 5em;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(3, 1fr);
     grid-column-gap: 3em;
     position: relative;
     top: -7em;
-    margin-bottom: -7em;
+    margin-bottom: -6em;
 }
 
 .machine .photo {
@@ -123,6 +123,17 @@ header .inner h2 {
     text-align: center;
     font-size: 1.25em;
     margin: 0;
+}
+
+.company_info {
+    width: var(--site-width);
+    padding: 2em 0;
+    font-size: 1.4em;
+    border-top: 1px solid #ececec;
+}
+
+.company_info img {
+    margin-top: 1em;
 }
 
 .gallery {
