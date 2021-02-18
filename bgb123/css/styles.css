@@ -19180,7 +19180,7 @@ body {
   }
 }
 .navbar-marketing.navbar-dark.navbar-scrolled {
-  background-color: #1f2d41 !important;
+  background-color: rgba(0,0,0,0.8) !important;
 }
 
 .navbar-marketing.navbar-light.navbar-scrolled {
@@ -19189,7 +19189,7 @@ body {
 
 @media (max-width: 991.98px) {
   .navbar-marketing.bg-transparent.navbar-dark {
-    background-color: #1f2d41 !important;
+    background-color: rgba(0,0,0,0.8) !important;
   }
 
   .navbar-marketing.bg-transparent.navbar-light {
